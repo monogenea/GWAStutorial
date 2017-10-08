@@ -13,8 +13,8 @@ For this tutorial you will additionally need the following files:
 http://phg.nus.edu.sg/StatGen/public_html/Iomics/downloads/iOmics_data.tar.gz
 
 This work was largely based on the following publications:
-https://www.nature.com/articles/s41467-017-00413-x (data source)
-http://onlinelibrary.wiley.com/doi/10.1002/sim.6605/full (method source)
+- https://www.nature.com/articles/s41467-017-00413-x (data source)
+- http://onlinelibrary.wiley.com/doi/10.1002/sim.6605/full (method source)
 
 Enjoy, any feedback is welcome!
 
