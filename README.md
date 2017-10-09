@@ -1,5 +1,6 @@
-# GWAStutorial
-GWAS tutorial
+# GWAS tutorial
+
+## ADDITIONAL FILES
 
 For this tutorial you will additionally need the following files:
 
@@ -12,14 +13,13 @@ For this tutorial you will additionally need the following files:
 
 http://phg.nus.edu.sg/StatGen/public_html/Iomics/downloads/iOmics_data.tar.gz
 
-###
+## INSTRUCTIONS
 
-INSTRUCTIONS:
 1. Gather all files and scripts in your working directory.
 2. Install all packages listed on top of the scripts.
 3. Run the scripts in their exact numbered order.
 
-###
+## ACKNOWLEDGEMENTS
 
 This work was largely based on the following publications:
 - https://www.nature.com/articles/s41467-017-00413-x (data source)
