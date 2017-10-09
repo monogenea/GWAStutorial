@@ -2,7 +2,7 @@
 
 ## ADDITIONAL FILES
 
-For this tutorial you will additionally need the following files:
+For this tutorial you will additionally need the files
 
 - 117Malay_282lipids.txt
 - 120Indian_282lipids.txt
@@ -11,11 +11,12 @@ For this tutorial you will additionally need the following files:
 - 108Malay_2527458snps.bed, .bim, .fam
 - 110Chinese_2527458snps.bed, .bim, .fam
 
+stored in the folders 'Lipidomic' and 'Genomics' contained in the following .gz:
 http://phg.nus.edu.sg/StatGen/public_html/Iomics/downloads/iOmics_data.tar.gz
 
 ## INSTRUCTIONS
 
-1. Gather all files and scripts in your working directory.
+1. Combine the folders 'Lipidomic' and 'Genomics' and all files from this repo in your working directory.
 2. Install all packages listed on top of the scripts.
 3. Run the scripts in their exact numbered order.
 
