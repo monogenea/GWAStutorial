@@ -88,6 +88,7 @@ legend("top", legend = c("Chinese", "Indian", "Malay"), col = 1:3, pch = 16, bty
 dev.off()
 
 # Choose trait for association analysis, use colnames(genData$LIP) for listing
+# NOTE: Ignore the first column of genData$LIP (gender)
 target <- "Cholesterol"
 
 phenodata <- data.frame("id" = rownames(genData$LIP),
