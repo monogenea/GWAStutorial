@@ -1,7 +1,7 @@
 
 
 library(snpStats)
-load("conversionTable.Rdata")
+load("conversionTable.RData")
 
 pathM <- paste("Genomics/108Malay_2527458snps", c(".bed", ".bim", ".fam"), sep = "")
 SNP_M <- read.plink(pathM[1], pathM[2], pathM[3])
