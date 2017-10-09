@@ -1,4 +1,4 @@
-# GWAS tutorial
+# Genome-wide association (GWA) tutorial
 
 ## ADDITIONAL FILES
 
@@ -17,7 +17,7 @@ http://phg.nus.edu.sg/StatGen/public_html/Iomics/downloads/iOmics_data.tar.gz
 ## INSTRUCTIONS
 
 1. Combine the folders 'Lipidomic' and 'Genomics' and all files from this repo in your working directory.
-2. Install all packages listed on top of the scripts.
+2. Install all packages listed on top of the scripts. 'snpStats' and 'SNPRelate' are deposited in BioConductor, all other packages in CRAN.
 3. Run the scripts in their exact numbered order.
 
 ## ACKNOWLEDGEMENTS
