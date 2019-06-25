@@ -1,5 +1,10 @@
 # Genome-wide association (GWA) tutorial
 
+## fork to rafalcode
+* some scripts tried to install packages: that is not the job of scripts.
+* packages should all be pre-installed.
+
+
 ## Additional files
 
 For this tutorial you will additionally need the files
