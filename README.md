@@ -1,10 +1,5 @@
 # Genome-wide association (GWA) tutorial
 
-## fork to rafalcode
-* some scripts tried to install packages: that is not the job of scripts.
-* packages should all be pre-installed.
-
-
 ## Additional files
 
 For this tutorial you will additionally need the files
@@ -23,6 +18,13 @@ http://phg.nus.edu.sg/StatGen/public_html/Iomics/downloads/iOmics_data.tar.gz
 
 1. Combine the folders 'Lipidomic' and 'Genomics' and all files from this repo in your working directory.
 2. Install all packages listed on top of the scripts. `snpStats` and `SNPRelate` are deposited in BioConductor, all other packages in CRAN.
+
+**UPDATE 25/06/2019: Linux/macOS installation of GenABEL**
+```
+install.packages("GenABEL.data", repos="http://R-Forge.R-project.org")
+packageurl -> "https://cran.r-project.org/src/contrib/Archive/GenABEL/GenABEL_1.8-0.tar.gz")
+install.packages(packageurl, repos=NULL)
+```
 3. Run the scripts in their exact numbered order.
 
 ## Acknowledgements
@@ -32,6 +34,6 @@ This work was largely based on the following publications:
 - *Establishing multiple omics baselines for three Southeast Asian populations in the Singapore Integrative Omics Study*, Saw et al. (2017), Nat. Comm. (data source)
 - *A guide to genome-wide association analysis and post-analytic interrogation*, Reed et al. (2015), Stats. in Med. (method source)
 
-Enjoy, any feedback is welcome!
+Also, thanks to @nizzle10 and @rafalcode for contributing. Enjoy, all feedback is welcome!
 
 Francisco
