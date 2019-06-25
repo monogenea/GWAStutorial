@@ -56,9 +56,9 @@ ibdcoef <- ibdcoef[ibdcoef$kinship >= kin,]
 related.samples <- NULL
 while (nrow(ibdcoef) > 0) {
       # count the number of occurrences of each and take the top one
-      sample.counts <- arrange(count(c(ibdcoef$ID1, ibdcoef$ID2)), -freq)
-      rm.sample <- sample.counts[1, 'x']
-      cat("Removing sample", as.character(rm.sample), 'too closely related to', sample.counts[1, 'freq'],'other samples.\n')
+      sample.counts <- sort(table(c(ibdcoef$ID1, ibdcoef$ID2)), decreasing = T)
+      rm.sample <- names(sample.counts)[1]
+      cat("Removing sample", rm.sample, "too closely related to", sample.counts[1], "other samples.\n")
       
       # remove from ibdcoef and add to list
       ibdcoef <- ibdcoef[ibdcoef$ID1 != rm.sample & ibdcoef$ID2 != rm.sample,]
