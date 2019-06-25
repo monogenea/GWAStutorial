@@ -3,7 +3,7 @@ library(snpStats)
 library(doParallel)
 library(SNPRelate)
 library(GenABEL)
-library(dplyr)
+library(dplyr) # I suspect this one is no longer necessary
 source("GWASfunction.R")
 load("PhenoGenoMap.RData")
 
