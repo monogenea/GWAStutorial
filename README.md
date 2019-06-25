@@ -11,8 +11,8 @@ For this tutorial you will additionally need the files
 - 108Malay_2527458snps.bed, .bim, .fam
 - 110Chinese_2527458snps.bed, .bim, .fam
 
-stored in the folders 'Lipidomic' and 'Genomics' contained in the following .gz:
-http://phg.nus.edu.sg/StatGen/public_html/Iomics/downloads/iOmics_data.tar.gz
+stored in the folders 'Lipidomic' and 'Genomics' contained in the following compressed file:
+https://sphfiles.nus.edu.sg/phg/Iomics/downloads/iOmics_data.tar.gz
 
 ## Instructions
 
