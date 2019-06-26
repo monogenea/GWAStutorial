@@ -2,7 +2,7 @@
 # 
 for(pkg in c("snpStats", "doParallel", "SNPRelate", "GenABEL")){
       if(!require(pkg, character.only = T)) {
-            stop(pgk, " is required for this script. Please install it on your system.")
+            stop("At least one pckg is required for this script. Please install it on your system.")
       }
 }
 

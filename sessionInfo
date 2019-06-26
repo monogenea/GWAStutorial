@@ -20,8 +20,12 @@ other attached packages:
 [10] Matrix_1.2-17      survival_2.44-1.1 
 
 loaded via a namespace (and not attached):
-[1] lattice_0.20-38     codetools_0.2-16   
-[3] grid_3.5.1          zlibbioc_1.28.0    
-[5] splines_3.5.1       tools_3.5.1        
-[7] yaml_2.2.0          compiler_3.5.1     
-[9] BiocGenerics_0.28.0
+ [1] Rcpp_1.0.1          lattice_0.20-38    
+ [3] codetools_0.2-16    digest_0.6.19      
+ [5] grid_3.5.1          evaluate_0.14      
+ [7] zlibbioc_1.28.0     rmarkdown_1.13     
+ [9] splines_3.5.1       tools_3.5.1        
+[11] rsconnect_0.8.13    xfun_0.8           
+[13] yaml_2.2.0          compiler_3.5.1     
+[15] BiocGenerics_0.28.0 htmltools_0.3.6    
+[17] knitr_1.23         
