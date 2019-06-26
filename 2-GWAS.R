@@ -1,9 +1,11 @@
+#!/usr/bin/env Rscript
+# 
+for(pkg in c("snpStats", "doParallel", "SNPRelate", "GenABEL")){
+      if(!require(pkg, character.only = T)) {
+            stop(pgk, " is required for this script. Please install it on your system.")
+      }
+}
 
-library(snpStats)
-library(doParallel)
-library(SNPRelate)
-library(GenABEL)
-library(dplyr) # I suspect this one is no longer necessary
 source("GWASfunction.R")
 load("PhenoGenoMap.RData")
 
@@ -33,7 +35,8 @@ genData$LIP <- genData$LIP[het_call,]
 ld <- .2
 kin <- .1
 snpgdsBED2GDS(bed.fn = "convertGDS.bed", bim.fn = "convertGDS.bim",
-              fam.fn = "convertGDS.fam", out.gdsfn = "myGDS", cvt.chr = "char")
+              fam.fn = "convertGDS.fam", out.gdsfn = "myGDS",
+              cvt.chr = "char")
 genofile <- snpgdsOpen("myGDS", readonly = F)
 gds.ids <- read.gdsn(index.gdsn(genofile,  "sample.id"))
 gds.ids <- sub("-1", "", gds.ids)
@@ -58,7 +61,8 @@ while (nrow(ibdcoef) > 0) {
       # count the number of occurrences of each and take the top one
       sample.counts <- sort(table(c(ibdcoef$ID1, ibdcoef$ID2)), decreasing = T)
       rm.sample <- names(sample.counts)[1]
-      cat("Removing sample", rm.sample, "too closely related to", sample.counts[1], "other samples.\n")
+      cat("Removing sample", rm.sample, "too closely related to",
+          sample.counts[1], "other samples.\n")
       
       # remove from ibdcoef and add to list
       ibdcoef <- ibdcoef[ibdcoef$ID1 != rm.sample & ibdcoef$ID2 != rm.sample,]
@@ -68,13 +72,15 @@ genData$SNP <- genData$SNP[!(rownames(genData$SNP) %in% related.samples),]
 genData$LIP <- genData$LIP[!(rownames(genData$LIP) %in% related.samples),]
 
 # PCA
-pca <- snpgdsPCA(genofile, sample.id = geno.sample.ids, snp.id = snpset.ibd, num.thread = 1)
+set.seed(100)
+pca <- snpgdsPCA(genofile, sample.id = geno.sample.ids, 
+                 snp.id = snpset.ibd, num.thread = 1)
 pctab <- data.frame(sample.id = pca$sample.id,
                     PC1 = pca$eigenvect[,1],
                     PC2 = pca$eigenvect[,2],
                     stringsAsFactors = F)
 
-origin <- read.delim("countryOrigin.txt", sep = "\t")
+# Subset and/or reorder origin accordingly
 origin <- origin[match(pca$sample.id, origin$sample.id),]
 
 pcaCol <- rep(rgb(0,0,0,.3), length(pca$sample.id)) # Set black for chinese
@@ -114,3 +120,5 @@ dev.off()
 png(paste(target, "_QQplot.png", sep = ""), width = 500, height = 500)
 lambda <- estlambda(GWASout$t.value**2, plot = T, method = "median")
 dev.off()
+
+writeLines(capture.output(sessionInfo()), "sessionInfo")

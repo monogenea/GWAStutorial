@@ -1,16 +1,17 @@
-
-# Merge all files and write as PLINK again; we need it in order to correct for kinship
-
-library(snpStats)
+#!/usr/bin/env Rscript
+# 
+if(!require("snpStats")) {
+      stop("snpStats is required for this script. Please install it on your system.")
+}
 load("conversionTable.RData")
 
-pathM <- paste("Genomics/108Malay_2527458snps", c(".bed", ".bim", ".fam"), sep = "")
+pathM <- paste("public/Genomics/108Malay_2527458snps", c(".bed", ".bim", ".fam"), sep = "")
 SNP_M <- read.plink(pathM[1], pathM[2], pathM[3])
 
-pathI <- paste("Genomics/105Indian_2527458snps", c(".bed", ".bim", ".fam"), sep = "")
+pathI <- paste("public/Genomics/105Indian_2527458snps", c(".bed", ".bim", ".fam"), sep = "")
 SNP_I <- read.plink(pathI[1], pathI[2], pathI[3])
 
-pathC <- paste("Genomics/110Chinese_2527458snps", c(".bed", ".bim", ".fam"), sep = "")
+pathC <- paste("public/Genomics/110Chinese_2527458snps", c(".bed", ".bim", ".fam"), sep = "")
 SNP_C <- read.plink(pathC[1], pathC[2], pathC[3])
 
 # Merge the three SNP datasets

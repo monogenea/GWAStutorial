@@ -22,7 +22,7 @@ https://sphfiles.nus.edu.sg/phg/Iomics/downloads/iOmics_data.tar.gz
 **UPDATE 25/06/2019: Linux/macOS installation of GenABEL**
 ```
 install.packages("GenABEL.data", repos="http://R-Forge.R-project.org")
-packageurl -> "https://cran.r-project.org/src/contrib/Archive/GenABEL/GenABEL_1.8-0.tar.gz")
+packageurl <- "https://cran.r-project.org/src/contrib/Archive/GenABEL/GenABEL_1.8-0.tar.gz"
 install.packages(packageurl, repos=NULL)
 ```
 3. Run the scripts in their exact numbered order.
