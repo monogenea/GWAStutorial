@@ -16,6 +16,8 @@ SNP_C <- read.plink(pathC[1], pathC[2], pathC[3])
 
 # Merge the three SNP datasets
 SNP_M$genotypes <- rbind(SNP_M$genotypes, SNP_I$genotypes, SNP_C$genotypes)
+# Take one bim map (all 3 maps are based on the same ordered set of SNPs)
+map <- SNP_M$map
 colnames(map) <- c("chr", "SNP", "gen.dist", "position", "A1", "A2")
 SNP_M$fam<- rbind(SNP_M$fam, SNP_I$fam, SNP_C$fam)
 
