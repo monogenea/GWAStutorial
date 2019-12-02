@@ -38,6 +38,6 @@ This work was largely based on the following publications:
 - *Establishing multiple omics baselines for three Southeast Asian populations in the Singapore Integrative Omics Study*, Saw et al. (2017), Nat. Comm. (data source)
 - *A guide to genome-wide association analysis and post-analytic interrogation*, Reed et al. (2015), Stats. in Med. (method source)
 
-Also, thanks to @nizzle10 and @rafalcode for contributing. Enjoy, all feedback is welcome!
+Also, thanks to @nizzle10, @rafalcode and @bambrozio for contributing. Enjoy, all feedback is welcome!
 
 Francisco
